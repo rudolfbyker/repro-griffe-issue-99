@@ -1,0 +1,16 @@
+site_name: docs
+docs_dir: src
+site_dir: dist
+theme: material
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3/objects.inv
+          paths: [../..]
+          options:
+            docstring_style: google
+            show_if_no_docstring: True
+            filters: []
